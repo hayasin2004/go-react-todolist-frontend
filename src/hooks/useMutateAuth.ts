@@ -10,6 +10,7 @@ export const useMutateAuth = () => {
     const resetEditedTask = useStore((state) => state.resetEditedTask)
     const { switchErrorHandling } = useError()
     const loginMutation = useMutation(
+
         async (user: Credential) =>
             await axios.post(`${process.env.REACT_APP_API_URL}/login`, user),
         {
